@@ -27,5 +27,6 @@ namespace IdentityPro19.Models.ViewModels
         public string ConfirmPassword { get; set; }
 
         public string? Mobile { get; set; }
+        public string? G { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 using IdentityPro19.Data;
+using IdentityPro19.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options=>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectionIdentity"));
 });
 // Configuration Identity
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().
     AddEntityFrameworkStores<ApplicationDbContext>();
 
 var app = builder.Build();
